@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron&family=Poppins:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar{
+    background-color: #101010;
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #563ae1;
+    border-radius: 10px;
+}
+
+body{
+    background-color: #101010;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
+.p-ats{
+    padding: 80px 0px 20px;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 4%;
+    height: 70px;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0);
+    position: fixed;
+    z-index: 10;
+}
+
+nav img{
+    width: 60px;
+    height: 60px;
+}
+
+nav .nav-link{
+    display: flex;
+}
+
+nav .nav-link a{
+    margin: 0px 15px;
+    font-size: 17px;
+    letter-spacing: 2px;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    transition: 0.2s ease-in-out;
+}
+
+nav .nav-link a:hover{
+    color: #d39b3c;
+    transition: 0.2s ease-in-out;
+}
+
+.home{
+    background-color: #0f1618;
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+    position: relative;
+}
+
+.home video{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+}
+
+.home .home-text{
+    width: 100% ;
+    height: fit-content;
+    z-index: 2;
+    top: 30%;
+    padding: 0px 5%;
+}
+
+.home-text h1{
+    color: #fff;
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 3px;
+    font-size: 55px;
+    margin-bottom: 40px;
+}
+
+.home-text h1 span{
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 4px;
+    color: #d39b3c;
+}
+
+.home-text a{
+    color: #fff;
+    font-size: 20px;
+    background-color: #563ae1;
+    padding: 12px 30px;
+    margin: 20px 0px;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 3px;
+    font-weight: 800;
+    border-radius: 10px;
+}
+
+.guest {
+    justify-content: center;
+    align-items: center;
+}
+
+.judul{
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.area-guest{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.box-guest{
+    width: 350px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 15px;
+    /* box-shadow: 0px 0px 10px #563ae1; */
+    margin: 10px;
+    justify-content: space-between;
+}
+
+.box-guest img{
+    margin-bottom: 20px;
+    object-position: center;
+    width: 100%;
+    height: 400px;
+}
+
+.box-guest .judul{
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.ticket{
+    align-items: center;
+    overflow: hidden;
+}
+
+.area-ticket{
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    margin: 20px 0px;
+    cursor: pointer;
+    position: relative;
+}
+
+.area-ticket .ticket-kiri{
+    width: 700px;
+    height: 300px;
+}
+
+.area-ticket .ticket-kanan{
+    height: 300px;
+}
+
+.robek{
+    transform: translateX(30px);
+    transition: 2s ease-in-out;
+}
+
+.robek2{
+    transform: translateX(-30px);
+    transition: 2s ease-in-out;
+}
+
+.kontak{
+    padding: 90px 5%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#map {
+    width: 500px;
+    height: 500px;
+}
+
+.info-kontak{
+    width: 500px;
+    height: fit-content;
+    margin: 20px 0px;
+}
+
+.info-kontak input{
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    margin: 10px 0px;
+    outline: none;
+    border-radius: 5px;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 2px;
+}
+
+.info-kontak .button-kirim{
+    background-color: #d39b3c;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media screen and (max-width:768px){
+    .area-guest{
+        flex-direction: column;
+        align-items: center;
+    }   
+
+    .area-ticket .ticket-kiri{
+        width: 400px;
+        height: 172px;
+    }
+
+    .area-ticket .ticket-kanan{
+        height: 172px;
+    }
+}

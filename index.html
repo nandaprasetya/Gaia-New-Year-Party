@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaia | New Years Party</title>
+    <link rel="shortcut icon" href="gambar/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="sweetalert.all.min.js"></script>
+    <link rel="stylesheet" href="sweetalert.min.css">
+    <script src="aos.js"></script>
+    <link rel="stylesheet" href="aos.css">
+</head>
+<body>
+    <nav>
+        <img src="gambar/logo.png" alt="" data-aos="fade-up" data-aos-duration="800">
+        <div class="nav-link">
+            <a href="#home" data-aos="fade-down" data-aos-duration="800" data-aos-delay="100">Home</a>
+            <a href="#guest" data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">Guest Star</a>
+            <a href="#tiket" data-aos="fade-down" data-aos-duration="800" data-aos-delay="300">Ticket</a>
+            <a href="#contact" data-aos="fade-down" data-aos-duration="800" data-aos-delay="400">Contact</a>
+        </div>
+    </nav>
+    <div class="home container">
+        <video src="gambar/background.mp4" loop muted autoplay></video>
+        <div class="home-text">
+            <h1 data-aos="fade-down" data-aos-duration="800" data-aos-delay="100">Let's Celebrate New Year <br> At <span>Gaia</span> New Year Party</h1>
+            <a href="#">Join Party</a>
+        </div>
+    </div>
+    <div class="guest container column p-ats">
+        <h1 class="judul" data-aos="fade-down" data-aos-duration="800" data-aos-delay="100">Guest Star</h1>
+        <div class="area-guest">
+            <div id="box-alan" class="box-guest column" >
+                <img src="gambar/alan.png" alt="" data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="100">
+                <h1 class="judul" data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">Alan Walker</h1>
+            </div>
+            <div id="box-timmy" class="box-guest column">
+                <img src="gambar/timmy.png" alt="" data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="200">
+                <h1 class="judul" data-aos="fade-down" data-aos-duration="800" data-aos-delay="300">Timmy Trumpet</h1>
+            </div>
+            <div id="box-aitch" class="box-guest column">
+                <img src="gambar/aitch1.png" alt="" data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="300">
+                <h1 class="judul" data-aos="fade-down" data-aos-duration="800" data-aos-delay="400">Aitch</h1>
+            </div>
+        </div>
+    </div>
+    <div class="ticket container column p-ats">
+        <h1 class="judul" data-aos="fade-down" data-aos-duration="800" data-aos-delay="100">Buy Ticket Now</h1>
+        <div id="ticket" class="area-ticket">
+            <img id="ticket-kiri" class="ticket-kiri" src="gambar/gaiaticketkiri.png" alt="">
+            <img id="ticket-kanan" class="ticket-kanan" src="gambar/gaiaticketkanan.png" alt="">
+        </div>
+    </div>
+    <div class="kontak container p-ats">
+        <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d79516.75903400437!2d115.20575266774225!3d-8.640966426289744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd238cfa9704293%3A0xb90785bd6a37c482!2sSMK%20Wira%20Harapan!5e0!3m2!1sen!2sid!4v1674278980649!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" data-aos="fade-down" data-aos-duration="800" data-aos-delay="100"></iframe>
+        <div class="info-kontak">
+            <h1 class="judul column" data-aos="fade-down" data-aos-duration="800" data-aos-delay="100">Contact</h1>
+            <form class="column">
+                <input type="text" placeholder="Your Name" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                <input type="email" name="" placeholder="Your Email" id="" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                <input type="text" placeholder="Your Question" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                <input class="button-kirim" onclick="kirim()" type="reset" value="SUBMIT" data-aos="zoom-in-up" data-aos-duration="800" data-aos-delay="400">
+            </form>
+        </div>
+    </div>
+
+    
+    <audio src="audio/alanwalker.mp3" id="audio-alan" loop ></audio>
+    <audio src="audio/timmytrumpet.mp3" id="audio-timmy" loop ></audio>
+    <audio src="audio/aitchsong.mp3" id="audio-aitch" loop ></audio>
+
+
+    <script>
+        AOS.init();
+        function kirim() {
+        swal("Succeed", "Message Successfully Sent", "success");
+      }
+        let audioalan = document.getElementById("audio-alan");
+        let audiotimmy = document.getElementById("audio-timmy");
+        let audioaitch = document.getElementById("audio-aitch");
+        let boxalan = document.getElementById("box-alan");
+        let boxtimmy = document.getElementById("box-timmy");
+        let boxaitch = document.getElementById("box-aitch");
+        boxalan.addEventListener('mouseover',(event) =>{
+            audioalan.play();
+        });
+        boxalan.addEventListener('mouseout',(event) =>{
+            audioalan.pause();
+        });
+        boxtimmy.addEventListener('mouseover',(event) =>{
+            audiotimmy.play();
+        });
+        boxtimmy.addEventListener('mouseout',(event) =>{
+            audiotimmy.pause();
+        });
+        boxaitch.addEventListener('mouseover',(event) =>{
+            audioaitch.play();
+        });
+        boxaitch.addEventListener('mouseout',(event) =>{
+            audioaitch.pause();
+        });
+
+        let ticket = document.getElementById("ticket");
+        ticket.addEventListener("click",buy);
+        function buy(){
+            let ticketkanan = document.getElementById("ticket-kanan");
+            let ticketkiri = document.getElementById("ticket-kiri");
+               ticketkanan.classList.add("robek");
+               ticketkiri.classList.add("robek2");
+                setTimeout(linkbuy, 2000);
+                function linkbuy(){
+                    window.location.replace('ticket.html');
+                }
+            }
+        
+    </script>
+</body>
+</html>
